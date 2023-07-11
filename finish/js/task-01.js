@@ -28,7 +28,7 @@ function myResult(){
     if(inputTypeValue === 'cm' && resultTypeValue === 'cm'){
         result.value = input.value
     } else if(inputTypeValue === 'cm' && resultTypeValue === 'm'){
-        result.value = Number(input.value) * 100
+        result.value = Number(input.value) / 100
     } else if(inputTypeValue === 'cm' && resultTypeValue === 'in'){
         result.value = (Number(input.value) / 2.54).toFixed(3)
     } else if(inputTypeValue === 'cm' && resultTypeValue === 'ft'){
