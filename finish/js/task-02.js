@@ -7,7 +7,7 @@ let myObject = [{ "user": "mitrofanov.322@gmail.com", "rating": 10, "disabled": 
 {"user": "groover@gmail.com", "rating": 40, "disabled": true},
 {"user": "kryshitel@gmail.com", "rating": 38, "disabled": true}]
 
-console.log(typeof myObject)
+console.log(`type of input data: ${typeof myObject}`)
 
 let json = JSON.stringify(myObject)
 

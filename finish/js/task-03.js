@@ -8,20 +8,20 @@ const dot_x_b = Math.floor(Math.random() * 10);
 const dot_y_b = Math.floor(Math.random() * 10);
 const dot_z_b = Math.floor(Math.random() * 10);
 
-console.log("Точка А:", dot_x_a, dot_y_a, dot_z_a);
-console.log("Точка B:", dot_x_b, dot_y_b, dot_z_b);
+console.log("dot А:", dot_x_a, dot_y_a, dot_z_a);
+console.log("dot B:", dot_x_b, dot_y_b, dot_z_b);
 
 let distance_final
 
 function f_distance_final(x, y, z) {
   distance_final = Math.sqrt((Math.pow((dot_x_a - dot_x_b), 2) + Math.pow((dot_y_a - dot_y_b), 2) + Math.pow((dot_z_a - dot_z_b), 2)));
-  console.log("Точки: ", x, y, z, "Дистанция: ", distance_final);
+  console.log("dots: ", x, y, z, "distance: ", distance_final.toFixed(3));
 }
 
 f_distance_final(dot_x_a, dot_y_a, dot_z_a)
 
 const distance_initial = distance_final;
-console.log("Нач. Дистанция: ", distance_initial, "Кон. Дистанция: ", distance_final);
+console.log("initial distance: ", distance_initial.toFixed(3), "final distance: ", distance_final.toFixed(3));
 
 function plus_x() {
   dot_x_a = dot_x_a + 1;
@@ -48,7 +48,7 @@ if (distance_final != 0) {
     
     if (distance_final != 0 && d0 > distance_final ) {
       d0 = distance_final;
-      console.log("Шаг x: ", x, "Прош. Дистанция: ", d0);
+      console.log("step x: ", x, "past distance: ", d0.toFixed(3));
       
       plus_x();
       f_distance_final(dot_x_a, dot_y_a, dot_z_a)
@@ -63,7 +63,7 @@ if (distance_final != 0) {
     
     if (distance_final != 0 && d0 >= distance_final) {
       d0 = distance_final;
-      console.log("Шаг y: ", y, "Прош. Дистанция: ", d0);
+      console.log("step y: ", y, "past distance: ", d0.toFixed(3));
 
       plus_y();
       f_distance_final(dot_x_a, dot_y_a, dot_z_a)
@@ -77,7 +77,7 @@ if (distance_final != 0) {
 
     if (distance_final != 0 && d0 >= distance_final ) {
       d0 = distance_final;
-      console.log("Шаг z: ", z, "Прош. Дистанция: ", d0);
+      console.log("step z: ", z, "past distance: ", d0.toFixed(3));
 
       plus_z();
       f_distance_final(dot_x_a, dot_y_a, dot_z_a);
@@ -88,4 +88,4 @@ if (distance_final != 0) {
 
 }
 
-console.log("Точка B:", dot_x_b, dot_y_b, dot_z_b);
+console.log("dot B:", dot_x_b, dot_y_b, dot_z_b);
